@@ -1,0 +1,5 @@
+[[tests]]
+name = "lab01"
+input = ["./lab01"]
+expected = "hello cs221"
+rubric = 100

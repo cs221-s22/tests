@@ -1,0 +1,23 @@
+[[tests]]
+name = "o-in-foobar"
+input = ["./lab02", "foobar", "o"]
+expected = "2"
+rubric = 45
+
+[[tests]]
+name = "r-in-foobar"
+input = ["./lab02", "foobar", "r"]
+expected = "1"
+rubric = 45
+
+[[tests]]
+name = "oo-in-foobar"
+input = ["./lab02", "foobar", "oo"]
+expected = "1"
+rubric = 5
+
+[[tests]]
+name = "fo-in-foobar"
+input = ["./lab02", "foobar", "fo"]
+expected = "1"
+rubric = 5
