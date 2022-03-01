@@ -1,0 +1,76 @@
+[[tests]]
+name = "empty"
+input = ["./$project", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+expected = """
+? | ? | ?
+--+---+--
+? | ? | ?
+--+---+--
+? | ? | ?
+"""
+rubric = 40
+
+[[tests]]
+name = "board"
+input = ["./$project", "X", "?", "O", "?", "X", "?", "?", "?", "O"]
+expected = """
+X | ? | O
+--+---+--
+? | X | ?
+--+---+--
+? | ? | O
+"""
+rubric = 40
+
+[[tests]]
+name = "xhoriz"
+input = ["./$project", "X", "X", "X", "?", "O", "?", "?", "?", "O"]
+expected = """
+X | X | X
+--+---+--
+? | O | ?
+--+---+--
+? | ? | O
+X wins
+"""
+rubric = 5
+
+[[tests]]
+name = "overt"
+input = ["./$project", "X", "X", "O", "?", "?", "O", "?", "?", "O"]
+expected = """
+X | X | O
+--+---+--
+? | ? | O
+--+---+--
+? | ? | O
+O wins
+"""
+rubric = 5
+
+[[tests]]
+name = "diag1"
+input = ["./$project", "O", "X", "X", "?", "O", "X", "X", "?", "O"]
+expected = """
+O | X | X
+--+---+--
+? | O | X
+--+---+--
+X | ? | O
+O wins
+"""
+rubric = 5
+
+[[tests]]
+name = "diag2"
+input = ["./$project", "X", "X", "O", "?", "O", "X", "O", "?", "O"]
+expected = """
+X | X | O
+--+---+--
+? | O | X
+--+---+--
+O | ? | O
+O wins
+"""
+rubric = 5
+
