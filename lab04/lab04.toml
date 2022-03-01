@@ -62,15 +62,15 @@ O wins
 rubric = 5
 
 [[tests]]
-name = "diag2"
-input = ["./$project", "X", "X", "O", "?", "O", "X", "O", "?", "O"]
+name = "draw"
+input = ["./$project", "X", "O", "X", "O", "X", "O", "O", "X", "O"]
 expected = """
-X | X | O
+X | O | X
 --+---+--
-? | O | X
+O | X | O
 --+---+--
-O | ? | O
-O wins
+O | X | O
+draw
 """
 rubric = 5
 
