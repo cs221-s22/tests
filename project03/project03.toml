@@ -1,5 +1,18 @@
 [[tests]]
-name = "1"
+name = "first"
+input = ["./$project", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+expected = """
+? | ? | ?
+--+---+--
+? | ? | ?
+--+---+--
+? | ? | ?
+O: 0 0
+"""
+rubric = 14
+
+[[tests]]
+name = "offensive1"
 input = ["./$project", "O", "?", "O", "X", "?", "X", "?", "?", "?"]
 expected = """
 O | ? | O
@@ -9,10 +22,10 @@ X | ? | X
 ? | ? | ?
 O: 0 1
 """
-rubric = 10
+rubric = 14
 
 [[tests]]
-name = "2"
+name = "offensive2"
 input = ["./$project", "O", "?", "X", "X", "O", "?", "?", "?", "?"]
 expected = """
 O | ? | X
@@ -22,4 +35,30 @@ X | O | ?
 ? | ? | ?
 O: 2 2
 """
-rubric = 10
+rubric = 14
+
+[[tests]]
+name = "defensive1"
+input = ["./$project", "X", "?", "X", "?", "O", "?", "?", "?", "?"]
+expected = """
+X | ? | X
+--+---+--
+? | O | ?
+--+---+--
+? | ? | ?
+O: 0 1
+"""
+rubric = 14
+
+[[tests]]
+name = "defensive2"
+input = ["./$project", "X", "?", "O", "?", "X", "?", "?", "?", "?"]
+expected = """
+X | ? | O
+--+---+--
+? | X | ?
+--+---+--
+? | ? | ?
+O: 2 2
+"""
+rubric = 14
