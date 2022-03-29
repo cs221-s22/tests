@@ -1,7 +1,7 @@
 [[tests]]
 name = "simple"
 input = ["./$project", "1 + 1"]
-rubric = 20
+rubric = 25
 expected = """
 TK_INTLIT("1")
 TK_PLUS("+")
@@ -12,7 +12,7 @@ TK_EOT("")
 [[tests]]
 name = "binlit"
 input = ["./$project", "0b1101 * 0b10"]
-rubric = 20
+rubric = 25
 expected = """
 TK_BINLIT("1101")
 TK_MULT("*")
@@ -23,7 +23,7 @@ TK_EOT("")
 [[tests]]
 name = "hexlit"
 input = ["./$project", "0xbadcafe - 0xcafe"]
-rubric = 20
+rubric = 25
 expected = """
 TK_HEXLIT("badcafe")
 TK_MINUS("-")
@@ -34,7 +34,7 @@ TK_EOT("")
 [[tests]]
 name = "kitchensink"
 input = ["./$project", "(((0xbadcafe - 0xcafe) + (0b11010101 - 3)) * 0x7fffff) / 2"]
-rubric = 20
+rubric = 25
 expected = """
 TK_LPAREN("(")
 TK_LPAREN("(")
